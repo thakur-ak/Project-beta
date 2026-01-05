@@ -1,0 +1,417 @@
+/* CSS CODE */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+* {
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+  font: weight 2px;
+  ;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100,
+    "YTLC" 500;
+  margin: 0;
+  padding: 0;
+}
+
+.progress {
+  width: 99vw;
+  height: 2px;
+  /* background-color: red; */
+  animation: progressbar 2s linear 1s;
+}
+
+@keyframes progressbar {
+
+  0% {
+    width: 0%;
+
+  }
+
+  99% {
+    width: 100%;
+    
+    /* display: none */
+  }
+}
+
+
+:root {
+  --main-bg-color: rgb(27, 16, 229);
+}
+
+body {
+  height: 100vh;
+  width: 99vw;
+  background-color: rgba(235, 224, 224, 0.5);
+}
+
+header {
+  background-color: var(--main-bg-color);
+  color: black;
+  height: 56px;
+
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+}
+
+header nav {
+  position: relative;
+  right: -23px;
+  font-weight: bolder;
+}
+
+header nav ul {
+  padding: 0;
+  margin: 0px 25px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+li {
+  display: inline-block;
+  text-decoration: none;
+  padding: 22px;
+}
+
+a:hover {
+  font-weight: bolder;
+  /* color: black;
+ background-color: rgb(215, 203, 203); */
+  /* border: 2px solid rgb(215, 203, 203);
+ border-radius: 4px; */
+}
+
+#profile {
+
+  height: 17px;
+  left: -899px;
+  top: 24px;
+  position: relative;
+
+}
+
+#cart {
+  height: 20px;
+  right: 809px;
+  top: 23px;
+  position: relative;
+}
+
+#fliplogo {
+  height: 43px;
+  width: 163px;
+  position: relative;
+  right: -6px;
+  top: 5px;
+}
+
+#aboutlogo {
+  height: 20px;
+  position: relative;
+  right: 723px;
+  top: 22px;
+}
+
+input {
+  width: 585px;
+  height: 35px;
+  display: flex;
+  align-self: center;
+  background-color: aliceblue;
+  /* border-radius: 10px; */
+  position: relative;
+  right: -41px;
+  top: 2px;
+  align-items: center;
+  padding: 0px 12px;
+  border: 2px solid grey;
+  border-radius: 4px;
+
+}
+
+input:hover {
+  background-color: gray;
+  border: 4px solid gray;
+
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+.btn {
+  display: flex;
+  align-self: center;
+  margin: 0px -41px;
+  background-color: #2a2aff;
+  color: white;
+  border: 2px solid beige;
+  height: 30px;
+  width: 63px;
+  border-radius: 4px;
+  padding: 5px 9px;
+  position: relative;
+  left: 95px;
+  top: 5px;
+  font-family: "Nunito Sans", sans-serif;
+
+}
+
+.btn:hover {
+  cursor: pointer;
+  box-shadow: 0 0 0 5px white, 0 0 0 8px#2a2aff;
+}
+.slider-container {
+  position: relative;
+  width: 1400px;
+  height: 240px;
+  margin: 40px auto;
+  background: #fff;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1400px;
+  height: 240px;
+  opacity: 0;
+  transition: opacity 1s ease;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+.slide img {
+  width: 1400px;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+}
+
+.nav-arrow {
+  position: absolute;
+  top: 50%;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 4;
+  transform: translateY(-50%);
+  opacity: 0.85;
+  transition: background 0.2s;
+}
+
+.nav-arrow:hover {
+  background: #222;
+}
+
+.nav-arrow.prev {
+  left: 16px;
+}
+
+.nav-arrow.next {
+  right: 16px;
+}
+
+.dots {
+  position: absolute;
+  bottom: 18px;
+  width: 100%;
+  text-align: center;
+  z-index: 10;
+}
+
+.dot {
+  display: inline-block;
+  width: 18px;
+  height: 5px;
+  margin: 0 3px;
+  background: #222;
+  opacity: 0.23;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.dot.active {
+  opacity: 1 !important;
+}
+
+.class1 {
+
+  background-color: rgb(255, 255, 255);
+  height: 40vh;
+  width: 100%;
+  margin: 53px 15px;
+  padding-top: 33px;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  
+}
+
+
+#firstone {
+  height: 34vh;
+  width: 1483px;
+  display: flex;
+  align-self: flex-start;
+  transform: translateX(-298px) translateY(-18px);
+  animation: slider 4s ease-in-out infinite 1s;
+
+}
+
+#secondone {
+  height: 34vh;
+  width: 1483px;
+  animation: slider2 4s ease-in-out infinite 1s;
+  transform: translateX(0px)translateY(-18px);
+
+}
+
+#thirdone {
+  height: 34vh;
+  width: 1483px;
+
+  transform: translate(42px) translateY(-18px);
+  /* visibility: hidden; */
+}
+
+@keyframes slider {
+  0% {
+    transform: translateX(-298px);
+  }
+
+  100% {
+    transform: translateX(1465px);
+  }
+}
+
+@keyframes slider2 {
+  0% {
+    transform: translate(0px);
+  }
+
+  100% {
+    transform: translate(1530px);
+  }
+}
+
+@keyframes slider3 {
+  0% {
+    transform: translate(0vw);
+  }
+
+  100% {
+    transform: translate(30vw);
+  }
+}
+h1{
+  display: flex;
+}
+.line1, .line2, .line3 {
+  text-align: center;
+  font-size: 9px;
+  font-weight: bold;
+}
+
+.pics {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  column-gap: 60px;
+  height: 135px;
+  width: 100%;
+padding: 40px;
+margin: 5px 5px 13px 5px;
+}
+
+.pic1 {
+  display: flex;
+  display: inline-block;
+
+}
+
+.pic2 {
+
+  display: flex;
+  display: inline-block;
+
+}
+
+.pic3 {
+  display: flex;
+  display: inline-block;
+
+}
+
+.pic4 {
+  display: flex;
+  display: inline-block;
+
+}
+
+.txt1 {
+  position: relative;
+  top: 177px;
+  right: 160px;
+  width: 158px;
+}
+
+.txt2 {
+  position: relative;
+  top: 177px;
+  right: 232px;
+  width: 158px;
+}
+
+.txt3 {
+  position: relative;
+  top: 177px;
+  right: 318px;
+  width: 158px;
+}
+
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-bg-color);
+  height: 10vh;
+  color: black;
+  background-color: rgb(27, 16, 229);
+ 
+}

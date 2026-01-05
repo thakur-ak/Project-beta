@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/utilities.css">
+
+</head>
+
+<body>
+
+    <header>
+        <img id="fliplogo" src="flipkart-logo-hq-free-download-18.png" alt="">
+
+
+        <nav>
+            <ul>
+                <li> <a href="">Account</a></li>
+                <li> <a href="">My cart</a></li>
+                <li> <a href="">About</a></li>
+
+            </ul>
+        </nav>
+        <div class="search"> <input placeholder=" search for products brands and more" name="" id=""> </div>
+        <button class="btn">Search</button>
+        <img id="profile" src="profile-round-1342-svgrepo-com.svg" alt="">
+        <img id="cart" src="cart-shopping-fast-svgrepo-com.svg" alt="">
+        <img id="aboutlogo" src="icons8-about-48.png" alt="">
+    </header>
+    <div class="progress" id="pageProgress" aria-hidden="true">
+      <div class="progress-bar" id="pageProgressBar"></div>
+    </div>
+
+    <style>
+      .progress {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 4px;
+        z-index: 9999;
+        pointer-events: none;
+      }
+      .progress-bar {
+        width: 0%;
+        height: 100%;
+        background: black;
+        transition: width 300ms linear;
+      }
+      .progress.hidden {
+        opacity: 0;
+        transition: opacity 300ms ease;
+        pointer-events: none;
+      }
+    </style>
+
+    <script>
+      (function () {
+        const bar = document.getElementById('pageProgressBar');
+        const container = document.getElementById('pageProgress');
+
+        // optional "fake" progress to show activity until load
+        let pct = 0;
+        let timer;
+        const step = () => {
+          pct = Math.min(95, pct + Math.random() * 10);
+          bar.style.width = pct + '%';
+          if (pct < 95) timer = setTimeout(step, 200);
+        };
+        timer = setTimeout(step, 200);
+
+        // hide/remove after full load
+        window.addEventListener('load', () => {
+          clearTimeout(timer);
+          bar.style.width = '100%';
+          // allow the final width transition then fade out and remove
+          setTimeout(() => container.classList.add('hidden'), 250);
+          setTimeout(() => container.remove(), 700);
+        });
+      })();
+    </script>
+    <main>
+      <div class="slider-container">
+    <div class="slide active">
+      <img src="https://rukminim2.flixcart.com/fk-p-flap/3240/540/image/4a7aaaf6717421be.jpeg?q=60" alt="Slide 1" />
+    </div>
+    <div class="slide">
+      <img src="https://rukminim2.flixcart.com/fk-p-flap/3240/540/image/abc4c6c9213d5188.jpeg?q=60" alt="Slide 2" />
+    </div>
+    <div class="slide">
+      <img src="https://rukminim2.flixcart.com/fk-p-flap/3240/540/image/846f891e13dc349d.jpg?q=60" alt="Slide 3" />
+    </div>
+    <button class="nav-arrow prev">&#8592;</button>
+    <button class="nav-arrow next">&#8594;</button>
+    <div class="dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </div>
+        <div class="heading"><h3>Deals on Bestsellers</h3></div>
+        <div class="pics">
+            <div class="pic1"> 
+                <img src="https://picsum.photos/200/300" alt="" height="130px" width="130px">
+                <div class="line1">Sale on Fashion Items</div>
+                <div class="line2">Flat 50% off</div>
+                <div class="line3">Best value!</div>
+                <!-- <div class="txt1"> 20% off on Fashion items -->
+            </div>
+            <div class="pic2">
+                <img src="https://picsum.photos/200/300" alt="" height="130px" width="130px">
+                <div class="line1">Accesories</div>
+                <div class="line2">Flat 20% Off</div>
+                <div class="line3">Valuable</div>
+                <!-- <div class="txt2"> Sale on Accesories</div> -->
+            </div>
+            <div class="pic3">
+
+                <img src="https://picsum.photos/200/300" alt="" height="130px" width="130px">
+                <div class="line1">Beauty Products</div>
+                <div class="line2">Sunny offers</div>
+                <div class="line3">Get at Lowest Price!</div>
+            </div>
+            <!-- <div class="txt3"> Beauty Products</div> -->
+            <div class="pic4"> <img src="https:/://rukminim2.flixcart.com/image/240/240/xif0q/water-purifier/a/u/x/-original-imahdt5pq9bzzstb.jpeg?q=60" alt="" height="130px" width="130px">
+                <div class="line1">Sale on Home essentials</div>
+                <div class="line2">Max 35% off</div>
+                <div class="line3">Grab Now!</div>
+            </div>
+        </div>
+        <div class="heading"><h3>Tyohar Trends</h3></div>
+        <div class="pics">
+            <div class="pic1"> 
+                <img src="https://picsum.photos/200/300" alt="" height="130px" width="130px">
+                <div class="line1">Sale on Fashion Items</div>
+                <div class="line2">Flat 50% off</div>
+                <div class="line3">Best value!</div>
+                <!-- <div class="txt1"> 20% off on Fashion items -->
+            </div>
+            <div class="pic2">
+                <img src="https://picsum.photos/200/300" alt="" height="130px" width="130px">
+                <div class="line1">Accesories</div>
+                <div class="line2">Flat 20% Off</div>
+                <div class="line3">Valuable</div>
+                <!-- <div class="txt2"> Sale on Accesories</div> -->
+            </div>
+            <div class="pic3">
+
+                <img src="https://picsum.photos/200/300" alt="" height="130px" width="130px">
+                <div class="line1">Beauty Products</div>
+                <div class="line2">Sunny offers</div>
+                <div class="line3">Get at Lowest Price!</div>
+            </div>
+            <!-- <div class="txt3"> Beauty Products</div> -->
+            <div class="pic4"> <img src="https:/://rukminim2.flixcart.com/image/240/240/xif0q/water-purifier/a/u/x/-original-imahdt5pq9bzzstb.jpeg?q=60" alt="" height="130px" width="130px">
+                <div class="line1">Sale on Home essentials</div>
+                <div class="line2">Max 35% off</div>
+                <div class="line3">Grab Now!</div>
+            </div>
+        </div>
+        <div class="heading"><h3>Top Pics Of the Month</h3></div>
+        <div class="pics">
+            <div class="pic1"> 
+                <img src="https://picsum.photos/200/300" alt="" height="130px" width="130px">
+                <div class="line1">Sale on Fashion Items</div>
+                <div class="line2">Flat 50% off</div>
+                <div class="line3">Best value!</div>
+                <!-- <div class="txt1"> 20% off on Fashion items -->
+            </div>
+            <div class="pic2">
+                <img src="https://picsum.photos/200/300" alt="" height="130px" width="130px">
+                <div class="line1">Accesories</div>
+                <div class="line2">Flat 20% Off</div>
+                <div class="line3">Valuable</div>
+                <!-- <div class="txt2"> Sale on Accesories</div> -->
+            </div>
+            <div class="pic3">
+
+                <img src="https://picsum.photos/200/300" alt="" height="130px" width="130px">
+                <div class="line1">Beauty Products</div>
+                <div class="line2">Sunny offers</div>
+                <div class="line3">Get at Lowest Price!</div>
+            </div>
+            <!-- <div class="txt3"> Beauty Products</div> -->
+            <div class="pic4"> <img src="https:/://rukminim2.flixcart.com/image/240/240/xif0q/water-purifier/a/u/x/-original-imahdt5pq9bzzstb.jpeg?q=60" alt="" height="130px" width="130px">
+                <div class="line1">Sale on Home essentials</div>
+                <div class="line2">Max 35% off</div>
+                <div class="line3">Grab Now!</div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        Copyright @ All Rights Reserved.
+    </footer>
+    <script> 
+        const slides = document.querySelectorAll('.slide');
+const dots = document.querySelectorAll('.dot');
+const prev = document.querySelector('.nav-arrow.prev');
+const next = document.querySelector('.nav-arrow.next');
+let index = 0, timer;
+
+function showSlide(i) {
+  slides.forEach((slide, idx) => {
+    slide.classList.toggle('active', idx === i);
+    dots[idx].classList.toggle('active', idx === i);
+  });
+  index = i;
+}
+
+function autoSlide() {
+  timer = setInterval(() => {
+    let nextIndex = (index + 1) % slides.length;
+    showSlide(nextIndex);
+  }, 5000);
+}
+
+function resetTimer() {
+  clearInterval(timer);
+  autoSlide();
+}
+
+next.addEventListener('click', () => {
+  showSlide((index + 1) % slides.length);
+  resetTimer();
+});
+
+prev.addEventListener('click', () => {
+  showSlide((index - 1 + slides.length) % slides.length);
+  resetTimer();
+});
+
+dots.forEach((dot, i) => {
+  dot.addEventListener('click', () => {
+    showSlide(i);
+    resetTimer();
+  });
+});
+
+autoSlide();
+
+    </script>
+</body>
+
+</html>
